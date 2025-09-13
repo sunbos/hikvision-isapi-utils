@@ -24,7 +24,7 @@ client = Client(
 )
 
 # 发送请求
-response = client._request("GET", "/ISAPI/System/deviceInfo")
+response = client._request("GET", "/ISAPI/System/capabilities")
 print(response.text)
 
 # 关闭客户端
@@ -44,7 +44,7 @@ async def main():
         password="your_password",
         protocol="http"
     ) as client:
-        response = await client._request("GET", "/ISAPI/System/deviceInfo")
+        response = await client._request("GET", "/ISAPI/System/capabilities")
         print(response.text)
 
 # 运行异步函数
